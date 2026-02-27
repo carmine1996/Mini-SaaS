@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\SubscriptionPlansSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        //creo utente se non esiste
         User::factory()->create([
             'name' => 'Test User',
             'first_name' => 'Test',
@@ -21,5 +22,7 @@ class DatabaseSeeder extends Seeder
             'password' => '12345',
             'role' => 'admin',
         ]);
+
+        SubscriptionPlansSeeder::run();
     }
 }
