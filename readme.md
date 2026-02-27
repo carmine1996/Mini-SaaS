@@ -13,5 +13,6 @@ Sistema di gestione abbonamenti per palestre / corsi online.
 ## Quick Setup
 1. Clone the repository
 2. Install Composer `composer i`  
-2. Install dependencies: `npm i`  
-3. Start development with artisan: `php artisan serve`
+3. Install dependencies: `npm i`
+4. Start seeder: `php artisan db:seed`
+5. Start development with artisan: `php artisan serve`
